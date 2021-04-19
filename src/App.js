@@ -4,41 +4,35 @@ import Counter from './Counter';
 
 function App() {
 
-  // const arrayC = [
-  //   {
-  //     appName: "Counter 1",
-  //     counterValue: 200
-  //   },
-  //   {
-  //     appName: "Counter 2",
-  //     counterValue: 100
-  //   },
-  //   {
-  //     appName: "Counter 3",
-  //     counterValue: 200
-  //   }
-  // ];
+  const arrayC = [
+    {
+      appName: "Counter 1",
+      counterValue: 200
+    },
+    {
+      appName: "Counter 2",
+      counterValue: 100
+    },
+    {
+      appName: "Counter Dracula",
+      counterValue: 0
+    }
+  ];
 
 
   return (
     <>
       <div>
-        {/* <Counter appName="Counter 1" />
-        <Counter appName="Counter 2" />
-        <Counter appName="Counter 3" /> */}
-
-        <Counter appName="counter 1" counterValue={200} />
+        {/* <Counter appName="counter 1" counterValue={200} />
         <Counter appName="counter 2" counterValue={100} />
-        <Counter appName="counter 3" counterValue={250} />
+        <Counter appName="counter 3" counterValue={250} /> */}
+        {
+          arrayC.map((counter, i) => <Counter key={i} appName={counter.appName} counterValue={counter.counterValue} />)
+        }
 
-        {/* 
-    // {
-      // arrayC.map((counter, i) => <Counter key={i} appName={counter.appName} counterValue={counter.counterValue} />)
-    // }
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-      </p> 
-        */}
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
         <a
           className="App-link"
           href="https://reactjs.org"
