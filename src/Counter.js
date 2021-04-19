@@ -6,9 +6,9 @@ import logo from './logo.svg';
 // export default function Counter(appName, counterValue) {
 export default function Counter() {
   const cohort = "E14";
-  const [counter, setCounter] = useState(0);
   const [counterName, setCounterName] = useState("Counter");
-  const [userInput, setUserInput] = useState();
+  const [counter, setCounter] = useState(0);
+  const [userInput, setUserInput] = useState(0);
 
   return (
     <>
@@ -25,41 +25,28 @@ export default function Counter() {
 
         <h4>Input Number</h4>
         <input onChange={(e) => setUserInput(Number(e.target.value))} placeholder="Enter Number"></input>
-
         <br />
+
         <h4>Counter Name:</h4>
         <input onChange={(e) => setCounterName(e.target.value)} placeholder="Enter Name"></input>
+        <br></br>
 
+        {/* {counter <= 0 ? '' : */}
+        <button onClick={() => setCounter((prevState) => prevState + userInput)}>Increment by
+        {userInput}
+        </button>
+        {/* } */}
+        <br></br>
 
-        {counter <= 0 ? '' :
-          <button onClick={() => setCounter((prevState) => prevState + userInput)}>Increment by
+        {/* {counter <= 0 ? '' : */}
+        <button onClick={() => setCounter((prevState) => prevState - userInput)}>Decrease by
           {userInput}
-          </button>
-        }
-
-        {/*
-          {counter <= 0 ? '' :
-            <button onClick={() => setCounter((prevState) => prevState - userInput)}>Decrease by
-          {userInput}
-            </button>
-          }
-          */}
+        </button>
+        {/* } */}
 
         <br></br>
         <button onClick={() => setCounter(0)}>Reset</button>
         <br></br>
-
-        {/* <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p> */}
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
       {/* </div> */}
     </>
