@@ -4,10 +4,11 @@ import { useState } from 'react';
 import logo from './logo.svg';
 
 // export default function Counter(appName, counterValue) {
-export default function Counter() {
+export default function Counter({ appName, counterValue }) {
+  // console.warn(props);
   const cohort = "E14";
-  const [counterName, setCounterName] = useState("Counter");
-  const [counter, setCounter] = useState(0);
+  const [counterName, setCounterName] = useState(appName);
+  const [counter, setCounter] = useState(counterValue);
   const [userInput, setUserInput] = useState(0);
 
   return (
@@ -23,11 +24,11 @@ export default function Counter() {
 
         <h3>{counter}</h3>
 
-        <h4>Input Number</h4>
+        <h4>Number:</h4>
         <input onChange={(e) => setUserInput(Number(e.target.value))} placeholder="Enter Number"></input>
         <br />
 
-        <h4>Counter Name:</h4>
+        <h4>Name:</h4>
         <input onChange={(e) => setCounterName(e.target.value)} placeholder="Enter Name"></input>
         <br></br>
 

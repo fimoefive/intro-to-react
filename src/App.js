@@ -23,13 +23,13 @@ function App() {
   return (
     <>
       <div>
-        <Counter />
-        <Counter />
-        <Counter />
+        {/* <Counter appName="Counter 1" />
+        <Counter appName="Counter 2" />
+        <Counter appName="Counter 3" /> */}
 
-        {/* <Counter appName="counter 1" initialValue={200} />
-      <Counter appName="counter 2" initialValue={200} />
-      <Counter appName="counter 3" initialValue={200} /> */}
+        <Counter appName="counter 1" counterValue={200} />
+        <Counter appName="counter 2" counterValue={100} />
+        <Counter appName="counter 3" counterValue={250} />
 
         {/* 
     // {
