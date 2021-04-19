@@ -23,7 +23,8 @@ function App() {
   return (
     <>
       <div>
-        {/* <Counter appName="counter 1" counterValue={200} />
+        {/*// Set variables for Counter Function
+        <Counter appName="counter 1" counterValue={200} />
         <Counter appName="counter 2" counterValue={100} />
         <Counter appName="counter 3" counterValue={250} /> */}
         {
