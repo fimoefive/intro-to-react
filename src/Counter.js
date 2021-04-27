@@ -35,11 +35,11 @@ export default function Counter({ appName, counterValue }) {
         {/* } */}
         <br></br>
 
-        {/* {counter <= 0 ? '' : */}
-        <button onClick={() => setCounter((prevState) => prevState - userInput)}>Decrease by
+        {counter <= 0 ? '' :
+          <button onClick={() => setCounter((prevState) => prevState - userInput)}>Decrease by
           {userInput}
-        </button>
-        {/* } */}
+          </button>
+        }
 
         <br></br>
         <button onClick={() => setCounter(0)}>Reset</button>
