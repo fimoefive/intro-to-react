@@ -1,9 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-// import React, { Component } from 'react';
 import logo from './logo.svg';
 
-// export default function Counter(appName, counterValue) {
 export default function Counter({ appName, counterValue }) {
   // console.warn(props);
   const cohort = "E14";
@@ -13,12 +11,10 @@ export default function Counter({ appName, counterValue }) {
 
   return (
     <>
-      {/* <div className="App"> */}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
         {cohort === "E14" ? <h1>Welcome to React Cohort {cohort} !!</h1> : <h1>Day Cohort!</h1>}
-        {/* <h2>COUNTER</h2> */}
 
         <h3>{counterName}</h3>
 
@@ -49,7 +45,6 @@ export default function Counter({ appName, counterValue }) {
         <button onClick={() => setCounter(0)}>Reset</button>
         <br></br>
       </header>
-      {/* </div> */}
     </>
   );
 };

@@ -14,7 +14,7 @@ function App() {
       counterValue: 100
     },
     {
-      appName: "Counter Dracula",
+      appName: "Count Dracula",
       counterValue: 0
     }
   ];
@@ -31,9 +31,6 @@ function App() {
           arrayC.map((counter, i) => <Counter key={i} appName={counter.appName} counterValue={counter.counterValue} />)
         }
 
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
         <a
           className="App-link"
           href="https://reactjs.org"
