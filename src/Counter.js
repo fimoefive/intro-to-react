@@ -3,6 +3,7 @@ import { useState } from 'react';
 import logo from './logo.svg';
 
 export default function Counter({ appName, counterValue }) {
+  // export default function Counter(props) {
   // console.warn(props);
   const cohort = "E14";
   const [counterName, setCounterName] = useState(appName);
@@ -28,16 +29,14 @@ export default function Counter({ appName, counterValue }) {
         <input onChange={(e) => setCounterName(e.target.value)} placeholder="Enter Name"></input>
         <br></br>
 
-        {/* {counter <= 0 ? '' : */}
         <button onClick={() => setCounter((prevState) => prevState + userInput)}>Increment by
-        {userInput}
+         {userInput}
         </button>
-        {/* } */}
         <br></br>
 
         {counter <= 0 ? '' :
           <button onClick={() => setCounter((prevState) => prevState - userInput)}>Decrease by
-          {userInput}
+           {userInput}
           </button>
         }
 

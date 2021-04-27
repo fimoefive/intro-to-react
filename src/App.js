@@ -19,25 +19,20 @@ function App() {
     }
   ];
 
-
   return (
     <>
       <div>
-        {/*// Set variables for Counter Function
+        {/*// Set variables for Counter Function for deconstructed arguments/values
         <Counter appName="counter 1" counterValue={200} />
         <Counter appName="counter 2" counterValue={100} />
         <Counter appName="counter 3" counterValue={250} /> */}
         {
           arrayC.map((counter, i) => <Counter key={i} appName={counter.appName} counterValue={counter.counterValue} />)
         }
-
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+          className="App-link" href="https://reactjs.org"
+          target="_blank" rel="noopener noreferrer"
+        > Learn React
         </a>
       </div>
     </>
@@ -49,7 +44,7 @@ function App() {
 //   render() {
 //     return (
 //       <div>
-
+//        <Counter/>
 //       </div>
 //     )
 //   }
